@@ -3,7 +3,7 @@ function Session({ session }) {
   return (
     session && (
       <div>
-        {/* TODO: This area should show only when there is an active focus or break - i.e. the session is running or is paused */}
+        {/* DONE?: This area should show only when there is an active focus or break - i.e. the session is running or is paused */}
         <div className="row mb-2">
           <div className="col">
             {/* TODO: Update message below to include current session (Focusing or On Break) total duration */}
