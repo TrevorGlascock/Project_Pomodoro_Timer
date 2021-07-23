@@ -1,10 +1,10 @@
 import React from "react";
-import { minutesToDuration } from "../utils/duration";
+import { minutesToDuration, secondsToDuration } from "../utils/duration";
 
 function Session({ session, focusDuration, breakDuration }) {
   const duration =
     session?.label === "Focusing" ? focusDuration : breakDuration;
-    
+
   return (
     session && (
       <div>
@@ -15,9 +15,9 @@ function Session({ session, focusDuration, breakDuration }) {
             <h2 data-testid="session-title">
               {session.label} for {minutesToDuration(duration)} minutes
             </h2>
-            {/* TODO: Update message below correctly format the time remaining in the current session */}
+            {/* DONE?: Update message below correctly format the time remaining in the current session */}
             <p className="lead" data-testid="session-sub-title">
-              {session.timeRemaining} remaining
+              {secondsToDuration(session.timeRemaining)} remaining
             </p>
           </div>
         </div>
