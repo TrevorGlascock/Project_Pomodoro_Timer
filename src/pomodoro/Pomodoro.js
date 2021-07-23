@@ -238,7 +238,11 @@ function Pomodoro() {
           </div>
         </div>
       </div>
-      <Session session={session} />
+      <Session
+        session={session}
+        focusDuration={focusDuration}
+        breakDuration={breakDuration}
+      />
     </div>
   );
 }
