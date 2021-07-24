@@ -3,10 +3,15 @@ import { minutesToDuration, secondsToDuration } from "../utils/duration";
 import ProgressBar from "./ProgressBar";
 
 function Session({ session, focusDuration, breakDuration }) {
+  // Duration is dynamically assigned to match the session-type on re-render
   const duration =
     session?.label === "Focusing" ? focusDuration : breakDuration;
+  //TotalTime is the duration (minutes) parsed into seconds.
   const totalTime = duration * 60;
 
+  /******************************************************************
+   ********************** JSX Return Statement **********************
+   *****************************************************************/
   return (
     session && (
       <div>
