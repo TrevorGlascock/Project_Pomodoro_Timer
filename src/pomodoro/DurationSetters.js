@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import DurationSetter from "./DurationSetter";
 
 function DurationSetters(props) {
