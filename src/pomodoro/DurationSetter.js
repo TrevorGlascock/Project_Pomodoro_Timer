@@ -2,7 +2,9 @@ import React from "react";
 import { minutesToDuration } from "../utils/duration";
 
 function DurationSetter({ session, durationObject, setterFunc }) {
-  //Event Handlers
+  /********************************************************
+   ****** Dynamic Increment/Decrement Event Handlers ******
+   *******************************************************/
   const handleIncrease = () => {
     setterFunc(({ duration }) => {
       return {
@@ -21,7 +23,9 @@ function DurationSetter({ session, durationObject, setterFunc }) {
     });
   };
 
-  //JSX Return for a single Duration Setter
+  /****************************************************************************
+   *************************** JSX Return Statement ***************************
+   ***************************************************************************/
   return (
     <div className="col">
       <div className="input-group input-group-lg mb-2">
