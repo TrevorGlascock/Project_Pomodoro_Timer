@@ -1,10 +1,9 @@
 import React from "react";
 
 function StopButton({ session, setSession, setIsTimerRunning }) {
-  /**
-   *    Called whenever the stop button is clicked
-   */
-
+  /*******************************
+   ** Stop Button Event Handler **
+   *******************************/
   function stop() {
     setIsTimerRunning(() => {
       setSession(null);
@@ -12,6 +11,9 @@ function StopButton({ session, setSession, setIsTimerRunning }) {
     });
   }
 
+  /******************************************
+   ********** JSX Return Statement **********
+   *****************************************/
   return (
     <button
       type="button"

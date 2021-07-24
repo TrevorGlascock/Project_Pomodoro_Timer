@@ -49,6 +49,7 @@ function nextSession(focusDuration, breakDuration) {
   };
 }
 
+//Complete Pomodoro Component
 function Pomodoro() {
   // Timer starts out paused
   const [isTimerRunning, setIsTimerRunning] = useState(false);
@@ -91,9 +92,14 @@ function Pomodoro() {
     isTimerRunning ? 1000 : null
   );
 
-  //JSX Return all Components
+  /************************************************
+   ************* JSX Return Statement *************
+   ***********************************************/
   return (
     <div className="pomodoro">
+      {/*****************************
+       * Duration Setters Component *
+       *****************************/}
       <DurationSetters
         session={session}
         focusObj={focusObj}
@@ -101,6 +107,10 @@ function Pomodoro() {
         breakObj={breakObj}
         setBreakObj={setBreakObj}
       />
+
+      {/*****************************
+       ** Timer Controls Component **
+       *****************************/}
       <TimerControls
         session={session}
         setSession={setSession}
@@ -108,6 +118,10 @@ function Pomodoro() {
         setIsTimerRunning={setIsTimerRunning}
         timeRemaining={focusObj.duration * 60}
       />
+
+      {/*****************************
+       ****   Session Component  ****
+       *****************************/}
       <Session
         session={session}
         focusDuration={focusObj.duration}

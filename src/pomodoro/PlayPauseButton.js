@@ -7,9 +7,9 @@ function PlayPauseButton({
   setIsTimerRunning,
   timeRemaining,
 }) {
-  /**
-   *    Called whenever the play/pause button is clicked.
-   */
+  /*****************************************************
+   ********** Play/Pause Button Event Handler **********
+   ****************************************************/
   function playPause() {
     setIsTimerRunning((prevState) => {
       const nextState = !prevState;
@@ -30,6 +30,9 @@ function PlayPauseButton({
     });
   }
 
+  /************************************************
+   ************* JSX Return Statement *************
+   ***********************************************/
   return (
     <button
       type="button"
