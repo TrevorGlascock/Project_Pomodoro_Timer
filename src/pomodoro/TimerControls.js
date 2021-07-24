@@ -9,6 +9,9 @@ function TimerControls({
   setIsTimerRunning,
   timeRemaining,
 }) {
+  /******************************************
+   ********** JSX Return Statement **********
+   *****************************************/
   return (
     <div className="row">
       <div className="col">
@@ -17,12 +20,18 @@ function TimerControls({
           role="group"
           aria-label="Timer controls"
         >
+          {/**********************************
+           *** Play/Pause Button Component ***
+           **********************************/}
           <PlayPauseButton
             setSession={setSession}
             isTimerRunning={isTimerRunning}
             setIsTimerRunning={setIsTimerRunning}
             timeRemaining={timeRemaining}
           />
+          {/**********************************
+           ****** Stop Button Component ******
+           **********************************/}
           <StopButton
             session={session}
             setSession={setSession}
