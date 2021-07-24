@@ -92,7 +92,9 @@ function Pomodoro() {
     isTimerRunning ? 1000 : null
   );
 
-  //Return each Component with JSX
+  /********************************
+   ***** JSX Return Statement *****
+   ********************************/
   return (
     <div className="pomodoro">
       {/*****************************
